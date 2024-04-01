@@ -1,0 +1,37 @@
+[2023-07-09T08:48:24.009+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.apply_pca manual__2023-07-09T08:48:15.522600+00:00 [queued]>
+[2023-07-09T08:48:24.023+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.apply_pca manual__2023-07-09T08:48:15.522600+00:00 [queued]>
+[2023-07-09T08:48:24.024+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T08:48:24.049+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): apply_pca> on 2023-07-09 08:48:15.522600+00:00
+[2023-07-09T08:48:24.059+0000] {standard_task_runner.py:57} INFO - Started process 3071 to run task
+[2023-07-09T08:48:24.063+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'apply_pca', 'manual__2023-07-09T08:48:15.522600+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpkozp0s9l']
+[2023-07-09T08:48:24.064+0000] {standard_task_runner.py:85} INFO - Job 126: Subtask apply_pca
+[2023-07-09T08:48:24.129+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.apply_pca manual__2023-07-09T08:48:15.522600+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-09T08:48:24.375+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='apply_pca' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T08:48:15.522600+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T08:48:15.522600+00:00'
+[2023-07-09T08:48:24.416+0000] {warnings.py:110} WARNING - /opt/***/dags/test.py:64: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with 'numeric_only=None') is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  df.fillna(df.mean(), inplace=True)
+
+[2023-07-09T08:48:24.425+0000] {warnings.py:110} WARNING - /opt/***/dags/test.py:67: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with 'numeric_only=None') is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+  df.fillna(df.median(), inplace=True)
+
+[2023-07-09T08:48:24.441+0000] {python.py:183} INFO - Done. Returned value was:    LocationAbbr          LocationDesc  ...       PCA1       PCA2
+0            AR              Arkansas  ...   2.329192  -2.050249
+1            CO              Colorado  ... -11.989688  -4.003571
+2            DC  District of Columbia  ...  14.517821   7.995440
+3            GA               Georgia  ...  10.997803  -0.242377
+4            MI              Michigan  ...   5.155159  10.091829
+6            OR                Oregon  ... -27.124871  -4.538535
+9            WI             Wisconsin  ...   0.612669   7.753479
+10           WI             Wisconsin  ...   0.612669   7.753479
+11           AL               Alabama  ...   8.257815  -1.474515
+12           ID                 Idaho  ... -21.480617  -2.968670
+13           ID                 Idaho  ... -21.480617  -2.968670
+14           IL              Illinois  ...   2.963120   4.525560
+15           KS                Kansas  ...  -4.552090  -1.200352
+16           KS                Kansas  ...  -4.552090  -1.200352
+17           KS                Kansas  ...  -4.552090  -1.200352
+18           LA             Louisiana  ...   3.583206  -5.253806
+
+[16 rows x 36 columns]
+[2023-07-09T08:48:24.575+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=apply_pca, execution_date=20230709T084815, start_date=20230709T084824, end_date=20230709T084824
+[2023-07-09T08:48:24.644+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-07-09T08:48:24.754+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

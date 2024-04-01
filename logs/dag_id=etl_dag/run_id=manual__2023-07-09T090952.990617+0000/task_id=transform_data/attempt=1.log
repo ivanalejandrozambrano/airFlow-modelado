@@ -1,0 +1,34 @@
+[2023-07-09T09:09:58.544+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.transform_data manual__2023-07-09T09:09:52.990617+00:00 [queued]>
+[2023-07-09T09:09:58.559+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.transform_data manual__2023-07-09T09:09:52.990617+00:00 [queued]>
+[2023-07-09T09:09:58.559+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T09:09:58.580+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): transform_data> on 2023-07-09 09:09:52.990617+00:00
+[2023-07-09T09:09:58.587+0000] {standard_task_runner.py:57} INFO - Started process 3562 to run task
+[2023-07-09T09:09:58.591+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'transform_data', 'manual__2023-07-09T09:09:52.990617+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp2mg_9_jp']
+[2023-07-09T09:09:58.592+0000] {standard_task_runner.py:85} INFO - Job 143: Subtask transform_data
+[2023-07-09T09:09:58.639+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.transform_data manual__2023-07-09T09:09:52.990617+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-09T09:09:58.866+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T09:09:52.990617+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T09:09:52.990617+00:00'
+[2023-07-09T09:09:58.877+0000] {python.py:183} INFO - Done. Returned value was:    LocationAbbr          LocationDesc  ...    Latitude  Longitude
+0            AR              Arkansas  ...  -92.274491  34.748650
+1            CO              Colorado  ... -106.133611  38.843841
+2            DC  District of Columbia  ...  -77.036871  38.907192
+3            GA               Georgia  ...  -83.627580  32.839681
+4            MI              Michigan  ...  -84.714390  44.661320
+5            MT               Montana  ... -109.424421  47.066529
+6            OR                Oregon  ... -120.155031  44.567449
+7            PR           Puerto Rico  ...  -66.590149  18.220833
+8            PR           Puerto Rico  ...  -66.590149  18.220833
+9            WI             Wisconsin  ...  -89.816371  44.393191
+10           WI             Wisconsin  ...  -89.816371  44.393191
+11           AL               Alabama  ...  -86.631861  32.840571
+12           ID                 Idaho  ... -114.363730  43.682630
+13           ID                 Idaho  ... -114.363730  43.682630
+14           IL              Illinois  ...  -88.997710  40.485010
+15           KS                Kansas  ...  -98.200781  38.347740
+16           KS                Kansas  ...  -98.200781  38.347740
+17           KS                Kansas  ...  -98.200781  38.347740
+18           LA             Louisiana  ...  -92.445680  31.312661
+
+[19 rows x 34 columns]
+[2023-07-09T09:09:58.960+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=transform_data, execution_date=20230709T090952, start_date=20230709T090958, end_date=20230709T090958
+[2023-07-09T09:09:59.003+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-07-09T09:09:59.086+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,34 @@
+[2023-07-10T15:46:59.595+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.apply_pca manual__2023-07-10T15:46:49.713017+00:00 [queued]>
+[2023-07-10T15:46:59.609+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.apply_pca manual__2023-07-10T15:46:49.713017+00:00 [queued]>
+[2023-07-10T15:46:59.611+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-10T15:46:59.635+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): apply_pca> on 2023-07-10 15:46:49.713017+00:00
+[2023-07-10T15:46:59.643+0000] {standard_task_runner.py:57} INFO - Started process 2774 to run task
+[2023-07-10T15:46:59.647+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'apply_pca', 'manual__2023-07-10T15:46:49.713017+00:00', '--job-id', '166', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpjbuqdxfz']
+[2023-07-10T15:46:59.648+0000] {standard_task_runner.py:85} INFO - Job 166: Subtask apply_pca
+[2023-07-10T15:46:59.716+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.apply_pca manual__2023-07-10T15:46:49.713017+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-10T15:46:59.975+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='apply_pca' AIRFLOW_CTX_EXECUTION_DATE='2023-07-10T15:46:49.713017+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-10T15:46:49.713017+00:00'
+[2023-07-10T15:46:59.994+0000] {python.py:183} INFO - Done. Returned value was:    LocationAbbr          LocationDesc  ...       PCA1       PCA2
+0            AR              Arkansas  ...   2.329192  -2.050249
+1            CO              Colorado  ... -11.989688  -4.003571
+2            DC  District of Columbia  ...  14.517821   7.995440
+3            GA               Georgia  ...  10.997803  -0.242377
+4            MI              Michigan  ...   5.155159  10.091829
+5            MT               Montana  ... -18.365173   2.144211
+6            OR                Oregon  ... -27.124871  -4.538535
+7            PR           Puerto Rico  ...  32.533893  -6.581275
+8            PR           Puerto Rico  ...  32.533893  -6.581275
+9            WI             Wisconsin  ...   0.612669   7.753479
+10           WI             Wisconsin  ...   0.612669   7.753479
+11           AL               Alabama  ...   8.257815  -1.474515
+12           ID                 Idaho  ... -21.480617  -2.968670
+13           ID                 Idaho  ... -21.480617  -2.968670
+14           IL              Illinois  ...   2.963120   4.525560
+15           KS                Kansas  ...  -4.552090  -1.200352
+16           KS                Kansas  ...  -4.552090  -1.200352
+17           KS                Kansas  ...  -4.552090  -1.200352
+18           LA             Louisiana  ...   3.583206  -5.253806
+
+[19 rows x 21 columns]
+[2023-07-10T15:47:00.071+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=apply_pca, execution_date=20230710T154649, start_date=20230710T154659, end_date=20230710T154700
+[2023-07-10T15:47:00.100+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-07-10T15:47:00.133+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,32 @@
+[2023-07-09T09:19:28.486+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.apply_pca manual__2023-07-09T09:19:20.127647+00:00 [queued]>
+[2023-07-09T09:19:28.498+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.apply_pca manual__2023-07-09T09:19:20.127647+00:00 [queued]>
+[2023-07-09T09:19:28.498+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T09:19:28.515+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): apply_pca> on 2023-07-09 09:19:20.127647+00:00
+[2023-07-09T09:19:28.522+0000] {standard_task_runner.py:57} INFO - Started process 3779 to run task
+[2023-07-09T09:19:28.525+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'apply_pca', 'manual__2023-07-09T09:19:20.127647+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp1r2vex8b']
+[2023-07-09T09:19:28.526+0000] {standard_task_runner.py:85} INFO - Job 151: Subtask apply_pca
+[2023-07-09T09:19:28.574+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.apply_pca manual__2023-07-09T09:19:20.127647+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-09T09:19:28.761+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='apply_pca' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T09:19:20.127647+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T09:19:20.127647+00:00'
+[2023-07-09T09:19:28.778+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 82, in apply_pca
+    df.drop('DataValueFootnote', axis=1, inplace=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 4913, in drop
+    errors=errors,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 4150, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 4185, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 6017, in drop
+    raise KeyError(f"{labels[mask]} not found in axis")
+KeyError: "['DataValueFootnote'] not found in axis"
+[2023-07-09T09:19:28.794+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=etl_dag, task_id=apply_pca, execution_date=20230709T091920, start_date=20230709T091928, end_date=20230709T091928
+[2023-07-09T09:19:28.808+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 151 for task apply_pca ("['DataValueFootnote'] not found in axis"; 3779)
+[2023-07-09T09:19:28.818+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-07-09T09:19:28.848+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

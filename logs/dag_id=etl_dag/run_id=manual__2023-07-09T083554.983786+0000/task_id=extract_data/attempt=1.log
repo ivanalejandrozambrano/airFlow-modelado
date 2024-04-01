@@ -1,0 +1,92 @@
+[2023-07-09T08:35:58.232+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_data manual__2023-07-09T08:35:54.983786+00:00 [queued]>
+[2023-07-09T08:35:58.248+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_data manual__2023-07-09T08:35:54.983786+00:00 [queued]>
+[2023-07-09T08:35:58.248+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T08:35:58.270+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): extract_data> on 2023-07-09 08:35:54.983786+00:00
+[2023-07-09T08:35:58.278+0000] {standard_task_runner.py:57} INFO - Started process 2694 to run task
+[2023-07-09T08:35:58.282+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_data', 'manual__2023-07-09T08:35:54.983786+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmprtrpj8x9']
+[2023-07-09T08:35:58.283+0000] {standard_task_runner.py:85} INFO - Job 103: Subtask extract_data
+[2023-07-09T08:35:58.339+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.extract_data manual__2023-07-09T08:35:54.983786+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-09T08:35:58.475+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T08:35:54.983786+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T08:35:54.983786+00:00'
+[2023-07-09T08:35:58.488+0000] {base.py:73} INFO - Using connection ID 'testsql' for task execution.
+[2023-07-09T08:35:58.510+0000] {logging_mixin.py:149} INFO - ================================
+[2023-07-09T08:35:58.512+0000] {logging_mixin.py:149} INFO - 0     
+1     
+2     
+3     
+4     
+5     
+6     
+7     
+8     
+9     
+10    
+11    
+12    
+13    
+14    
+15    
+16    
+17    
+18    
+Name: Response, dtype: object
+[2023-07-09T08:35:58.512+0000] {logging_mixin.py:149} INFO - ================================
+[2023-07-09T08:35:58.513+0000] {logging_mixin.py:149} INFO - <class 'pandas.core.frame.DataFrame'>
+[2023-07-09T08:35:58.513+0000] {logging_mixin.py:149} INFO - YearStart
+[2023-07-09T08:35:58.514+0000] {logging_mixin.py:149} INFO - YearEnd
+[2023-07-09T08:35:58.514+0000] {logging_mixin.py:149} INFO - LocationAbbr
+[2023-07-09T08:35:58.515+0000] {logging_mixin.py:149} INFO - LocationDesc
+[2023-07-09T08:35:58.515+0000] {logging_mixin.py:149} INFO - DataSource
+[2023-07-09T08:35:58.516+0000] {logging_mixin.py:149} INFO - Topic
+[2023-07-09T08:35:58.516+0000] {logging_mixin.py:149} INFO - Question
+[2023-07-09T08:35:58.517+0000] {logging_mixin.py:149} INFO - Response
+[2023-07-09T08:35:58.517+0000] {logging_mixin.py:149} INFO - DataValueUnit
+[2023-07-09T08:35:58.518+0000] {logging_mixin.py:149} INFO - DataValueType
+[2023-07-09T08:35:58.518+0000] {logging_mixin.py:149} INFO - DataValue
+[2023-07-09T08:35:58.519+0000] {logging_mixin.py:149} INFO - DataValueAlt
+[2023-07-09T08:35:58.519+0000] {logging_mixin.py:149} INFO - DataValueFootnoteSymbol
+[2023-07-09T08:35:58.520+0000] {logging_mixin.py:149} INFO - DatavalueFootnote
+[2023-07-09T08:35:58.520+0000] {logging_mixin.py:149} INFO - LowConfidenceLimit
+[2023-07-09T08:35:58.520+0000] {logging_mixin.py:149} INFO - HighConfidenceLimit
+[2023-07-09T08:35:58.521+0000] {logging_mixin.py:149} INFO - StratificationCategory1
+[2023-07-09T08:35:58.521+0000] {logging_mixin.py:149} INFO - Stratification1
+[2023-07-09T08:35:58.522+0000] {logging_mixin.py:149} INFO - StratificationCategory2
+[2023-07-09T08:35:58.522+0000] {logging_mixin.py:149} INFO - Stratification2
+[2023-07-09T08:35:58.523+0000] {logging_mixin.py:149} INFO - StratificationCategory3
+[2023-07-09T08:35:58.523+0000] {logging_mixin.py:149} INFO - Stratification3
+[2023-07-09T08:35:58.524+0000] {logging_mixin.py:149} INFO - GeoLocation
+[2023-07-09T08:35:58.524+0000] {logging_mixin.py:149} INFO - ResponseID
+[2023-07-09T08:35:58.525+0000] {logging_mixin.py:149} INFO - LocationID
+[2023-07-09T08:35:58.525+0000] {logging_mixin.py:149} INFO - TopicID
+[2023-07-09T08:35:58.526+0000] {logging_mixin.py:149} INFO - QuestionID
+[2023-07-09T08:35:58.526+0000] {logging_mixin.py:149} INFO - DataValueTypeID
+[2023-07-09T08:35:58.526+0000] {logging_mixin.py:149} INFO - StratificationCategoryID1
+[2023-07-09T08:35:58.527+0000] {logging_mixin.py:149} INFO - StratificationID1
+[2023-07-09T08:35:58.527+0000] {logging_mixin.py:149} INFO - StratificationCategoryID2
+[2023-07-09T08:35:58.528+0000] {logging_mixin.py:149} INFO - StratificationID2
+[2023-07-09T08:35:58.529+0000] {logging_mixin.py:149} INFO - StratificationCategoryID3
+[2023-07-09T08:35:58.529+0000] {logging_mixin.py:149} INFO - StratificationID3
+[2023-07-09T08:35:58.530+0000] {python.py:183} INFO - Done. Returned value was:     YearStart  YearEnd  ... StratificationCategoryID3 StratificationID3
+0        2014     2014  ...                                            
+1        2018     2018  ...                                            
+2        2018     2018  ...                                            
+3        2017     2017  ...                                            
+4        2010     2010  ...                                            
+5        2015     2015  ...                                            
+6        2013     2013  ...                                            
+7        2013     2013  ...                                            
+8        2017     2017  ...                                            
+9        2010     2010  ...                                            
+10       2016     2016  ...                                            
+11       2014     2014  ...                                            
+12       2015     2015  ...                                            
+13       2016     2016  ...                                            
+14       2020     2020  ...                                            
+15       2012     2012  ...                                            
+16       2015     2015  ...                                            
+17       2018     2018  ...                                            
+18       2017     2017  ...                                            
+
+[19 rows x 34 columns]
+[2023-07-09T08:35:58.634+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_data, execution_date=20230709T083554, start_date=20230709T083558, end_date=20230709T083558
+[2023-07-09T08:35:58.694+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-07-09T08:35:58.750+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2023-07-09T06:10:02.172+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.transform_data manual__2023-07-09T06:09:56.615924+00:00 [queued]>
+[2023-07-09T06:10:02.184+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.transform_data manual__2023-07-09T06:09:56.615924+00:00 [queued]>
+[2023-07-09T06:10:02.185+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T06:10:02.204+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): transform_data> on 2023-07-09 06:09:56.615924+00:00
+[2023-07-09T06:10:02.210+0000] {standard_task_runner.py:57} INFO - Started process 1195 to run task
+[2023-07-09T06:10:02.213+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'transform_data', 'manual__2023-07-09T06:09:56.615924+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmppexyuouw']
+[2023-07-09T06:10:02.213+0000] {standard_task_runner.py:85} INFO - Job 21: Subtask transform_data
+[2023-07-09T06:10:02.261+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.transform_data manual__2023-07-09T06:09:56.615924+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-09T06:10:02.453+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T06:09:56.615924+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T06:09:56.615924+00:00'
+[2023-07-09T06:10:02.456+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/test.py", line 17, in transform
+    df['YearStart'] = datetime.strptime(str(df['YearStart']), '%Y')
+  File "/usr/local/lib/python3.7/_strptime.py", line 577, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/usr/local/lib/python3.7/_strptime.py", line 359, in _strptime
+    (data_string, format))
+ValueError: time data '0     2014\n1     2018\n2     2018\n3     2017\n4     2010\n5     2015\n6     2013\n7     2013\n8     2017\n9     2010\n10    2016\n11    2014\n12    2015\n13    2016\n14    2020\n15    2012\n16    2015\n17    2018\n18    2017\nName: YearStart, dtype: int64' does not match format '%Y'
+[2023-07-09T06:10:02.470+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=etl_dag, task_id=transform_data, execution_date=20230709T060956, start_date=20230709T061002, end_date=20230709T061002
+[2023-07-09T06:10:02.485+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 21 for task transform_data (time data '0     2014\n1     2018\n2     2018\n3     2017\n4     2010\n5     2015\n6     2013\n7     2013\n8     2017\n9     2010\n10    2016\n11    2014\n12    2015\n13    2016\n14    2020\n15    2012\n16    2015\n17    2018\n18    2017\nName: YearStart, dtype: int64' does not match format '%Y'; 1195)
+[2023-07-09T06:10:02.505+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-07-09T06:10:02.535+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

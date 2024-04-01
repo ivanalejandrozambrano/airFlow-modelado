@@ -1,0 +1,703 @@
+[2023-07-09T08:42:38.260+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.extract_data manual__2023-07-09T08:42:35.257664+00:00 [queued]>
+[2023-07-09T08:42:38.274+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.extract_data manual__2023-07-09T08:42:35.257664+00:00 [queued]>
+[2023-07-09T08:42:38.274+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-07-09T08:42:38.298+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): extract_data> on 2023-07-09 08:42:35.257664+00:00
+[2023-07-09T08:42:38.305+0000] {standard_task_runner.py:57} INFO - Started process 2892 to run task
+[2023-07-09T08:42:38.308+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'extract_data', 'manual__2023-07-09T08:42:35.257664+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmpikljthhx']
+[2023-07-09T08:42:38.309+0000] {standard_task_runner.py:85} INFO - Job 115: Subtask extract_data
+[2023-07-09T08:42:38.374+0000] {task_command.py:410} INFO - Running <TaskInstance: etl_dag.extract_data manual__2023-07-09T08:42:35.257664+00:00 [running]> on host 5865fe7b5e5b
+[2023-07-09T08:42:38.491+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2023-07-09T08:42:35.257664+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-07-09T08:42:35.257664+00:00'
+[2023-07-09T08:42:38.504+0000] {base.py:73} INFO - Using connection ID 'testsql' for task execution.
+[2023-07-09T08:42:38.526+0000] {logging_mixin.py:149} INFO - ================================
+[2023-07-09T08:42:38.528+0000] {logging_mixin.py:149} INFO - 0     
+1     
+2     
+3     
+4     
+5     
+6     
+7     
+8     
+9     
+10    
+11    
+12    
+13    
+14    
+15    
+16    
+17    
+18    
+Name: Response, dtype: object
+[2023-07-09T08:42:38.529+0000] {logging_mixin.py:149} INFO - ================================
+[2023-07-09T08:42:38.530+0000] {logging_mixin.py:149} INFO - Element at index 0, column YearStart: 2014
+[2023-07-09T08:42:38.531+0000] {logging_mixin.py:149} INFO - Element at index 0, column YearEnd: 2014
+[2023-07-09T08:42:38.531+0000] {logging_mixin.py:149} INFO - Element at index 0, column LocationAbbr: AR
+[2023-07-09T08:42:38.532+0000] {logging_mixin.py:149} INFO - Element at index 0, column LocationDesc: Arkansas
+[2023-07-09T08:42:38.532+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.533+0000] {logging_mixin.py:149} INFO - Element at index 0, column Topic: Asthma
+[2023-07-09T08:42:38.533+0000] {logging_mixin.py:149} INFO - Element at index 0, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.534+0000] {logging_mixin.py:149} INFO - Element at index 0, column Response: 
+[2023-07-09T08:42:38.535+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataValueUnit: 
+[2023-07-09T08:42:38.535+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataValueType: Number
+[2023-07-09T08:42:38.536+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataValue: 916.0
+[2023-07-09T08:42:38.536+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataValueAlt: 916.0
+[2023-07-09T08:42:38.537+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.537+0000] {logging_mixin.py:149} INFO - Element at index 0, column DatavalueFootnote: 
+[2023-07-09T08:42:38.538+0000] {logging_mixin.py:149} INFO - Element at index 0, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.539+0000] {logging_mixin.py:149} INFO - Element at index 0, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.539+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.540+0000] {logging_mixin.py:149} INFO - Element at index 0, column Stratification1: M***
+[2023-07-09T08:42:38.541+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationCategory2: 
+[2023-07-09T08:42:38.542+0000] {logging_mixin.py:149} INFO - Element at index 0, column Stratification2: 
+[2023-07-09T08:42:38.543+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationCategory3: 
+[2023-07-09T08:42:38.543+0000] {logging_mixin.py:149} INFO - Element at index 0, column Stratification3: 
+[2023-07-09T08:42:38.544+0000] {logging_mixin.py:149} INFO - Element at index 0, column GeoLocation: POINT (-92.27449074299966 34.74865012400045)
+[2023-07-09T08:42:38.545+0000] {logging_mixin.py:149} INFO - Element at index 0, column ResponseID: 
+[2023-07-09T08:42:38.546+0000] {logging_mixin.py:149} INFO - Element at index 0, column LocationID: 5
+[2023-07-09T08:42:38.547+0000] {logging_mixin.py:149} INFO - Element at index 0, column TopicID: AST
+[2023-07-09T08:42:38.548+0000] {logging_mixin.py:149} INFO - Element at index 0, column QuestionID: AST3_1
+[2023-07-09T08:42:38.548+0000] {logging_mixin.py:149} INFO - Element at index 0, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.549+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.550+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationID1: GENM
+[2023-07-09T08:42:38.550+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.551+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationID2: 
+[2023-07-09T08:42:38.551+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.552+0000] {logging_mixin.py:149} INFO - Element at index 0, column StratificationID3: 
+[2023-07-09T08:42:38.553+0000] {logging_mixin.py:149} INFO - Element at index 1, column YearStart: 2018
+[2023-07-09T08:42:38.553+0000] {logging_mixin.py:149} INFO - Element at index 1, column YearEnd: 2018
+[2023-07-09T08:42:38.554+0000] {logging_mixin.py:149} INFO - Element at index 1, column LocationAbbr: CO
+[2023-07-09T08:42:38.555+0000] {logging_mixin.py:149} INFO - Element at index 1, column LocationDesc: Colorado
+[2023-07-09T08:42:38.556+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.556+0000] {logging_mixin.py:149} INFO - Element at index 1, column Topic: Asthma
+[2023-07-09T08:42:38.557+0000] {logging_mixin.py:149} INFO - Element at index 1, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.558+0000] {logging_mixin.py:149} INFO - Element at index 1, column Response: 
+[2023-07-09T08:42:38.558+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataValueUnit: 
+[2023-07-09T08:42:38.559+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataValueType: Number
+[2023-07-09T08:42:38.560+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataValue: 2227.0
+[2023-07-09T08:42:38.560+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataValueAlt: 2227.0
+[2023-07-09T08:42:38.561+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.561+0000] {logging_mixin.py:149} INFO - Element at index 1, column DatavalueFootnote: 
+[2023-07-09T08:42:38.562+0000] {logging_mixin.py:149} INFO - Element at index 1, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.563+0000] {logging_mixin.py:149} INFO - Element at index 1, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.563+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.564+0000] {logging_mixin.py:149} INFO - Element at index 1, column Stratification1: Overall
+[2023-07-09T08:42:38.564+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationCategory2: 
+[2023-07-09T08:42:38.565+0000] {logging_mixin.py:149} INFO - Element at index 1, column Stratification2: 
+[2023-07-09T08:42:38.565+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationCategory3: 
+[2023-07-09T08:42:38.566+0000] {logging_mixin.py:149} INFO - Element at index 1, column Stratification3: 
+[2023-07-09T08:42:38.566+0000] {logging_mixin.py:149} INFO - Element at index 1, column GeoLocation: POINT (-106.13361092099967 38.843840757000464)
+[2023-07-09T08:42:38.567+0000] {logging_mixin.py:149} INFO - Element at index 1, column ResponseID: 
+[2023-07-09T08:42:38.567+0000] {logging_mixin.py:149} INFO - Element at index 1, column LocationID: 8
+[2023-07-09T08:42:38.568+0000] {logging_mixin.py:149} INFO - Element at index 1, column TopicID: AST
+[2023-07-09T08:42:38.568+0000] {logging_mixin.py:149} INFO - Element at index 1, column QuestionID: AST3_1
+[2023-07-09T08:42:38.569+0000] {logging_mixin.py:149} INFO - Element at index 1, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.569+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.569+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationID1: OVR
+[2023-07-09T08:42:38.570+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.570+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationID2: 
+[2023-07-09T08:42:38.571+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.571+0000] {logging_mixin.py:149} INFO - Element at index 1, column StratificationID3: 
+[2023-07-09T08:42:38.572+0000] {logging_mixin.py:149} INFO - Element at index 2, column YearStart: 2018
+[2023-07-09T08:42:38.572+0000] {logging_mixin.py:149} INFO - Element at index 2, column YearEnd: 2018
+[2023-07-09T08:42:38.572+0000] {logging_mixin.py:149} INFO - Element at index 2, column LocationAbbr: DC
+[2023-07-09T08:42:38.573+0000] {logging_mixin.py:149} INFO - Element at index 2, column LocationDesc: District of Columbia
+[2023-07-09T08:42:38.573+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.574+0000] {logging_mixin.py:149} INFO - Element at index 2, column Topic: Asthma
+[2023-07-09T08:42:38.575+0000] {logging_mixin.py:149} INFO - Element at index 2, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.575+0000] {logging_mixin.py:149} INFO - Element at index 2, column Response: 
+[2023-07-09T08:42:38.576+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataValueUnit: 
+[2023-07-09T08:42:38.576+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataValueType: Number
+[2023-07-09T08:42:38.576+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataValue: 708.0
+[2023-07-09T08:42:38.577+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataValueAlt: 708.0
+[2023-07-09T08:42:38.577+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.577+0000] {logging_mixin.py:149} INFO - Element at index 2, column DatavalueFootnote: 
+[2023-07-09T08:42:38.578+0000] {logging_mixin.py:149} INFO - Element at index 2, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.578+0000] {logging_mixin.py:149} INFO - Element at index 2, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.579+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.579+0000] {logging_mixin.py:149} INFO - Element at index 2, column Stratification1: Overall
+[2023-07-09T08:42:38.579+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationCategory2: 
+[2023-07-09T08:42:38.580+0000] {logging_mixin.py:149} INFO - Element at index 2, column Stratification2: 
+[2023-07-09T08:42:38.580+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationCategory3: 
+[2023-07-09T08:42:38.581+0000] {logging_mixin.py:149} INFO - Element at index 2, column Stratification3: 
+[2023-07-09T08:42:38.581+0000] {logging_mixin.py:149} INFO - Element at index 2, column GeoLocation: POINT (-77.036871 38.907192)
+[2023-07-09T08:42:38.582+0000] {logging_mixin.py:149} INFO - Element at index 2, column ResponseID: 
+[2023-07-09T08:42:38.582+0000] {logging_mixin.py:149} INFO - Element at index 2, column LocationID: 11
+[2023-07-09T08:42:38.582+0000] {logging_mixin.py:149} INFO - Element at index 2, column TopicID: AST
+[2023-07-09T08:42:38.583+0000] {logging_mixin.py:149} INFO - Element at index 2, column QuestionID: AST3_1
+[2023-07-09T08:42:38.583+0000] {logging_mixin.py:149} INFO - Element at index 2, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.584+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.584+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationID1: OVR
+[2023-07-09T08:42:38.584+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.585+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationID2: 
+[2023-07-09T08:42:38.585+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.586+0000] {logging_mixin.py:149} INFO - Element at index 2, column StratificationID3: 
+[2023-07-09T08:42:38.586+0000] {logging_mixin.py:149} INFO - Element at index 3, column YearStart: 2017
+[2023-07-09T08:42:38.587+0000] {logging_mixin.py:149} INFO - Element at index 3, column YearEnd: 2017
+[2023-07-09T08:42:38.587+0000] {logging_mixin.py:149} INFO - Element at index 3, column LocationAbbr: GA
+[2023-07-09T08:42:38.587+0000] {logging_mixin.py:149} INFO - Element at index 3, column LocationDesc: Georgia
+[2023-07-09T08:42:38.588+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.588+0000] {logging_mixin.py:149} INFO - Element at index 3, column Topic: Asthma
+[2023-07-09T08:42:38.589+0000] {logging_mixin.py:149} INFO - Element at index 3, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.589+0000] {logging_mixin.py:149} INFO - Element at index 3, column Response: 
+[2023-07-09T08:42:38.590+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataValueUnit: 
+[2023-07-09T08:42:38.590+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataValueType: Number
+[2023-07-09T08:42:38.590+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataValue: 3520.0
+[2023-07-09T08:42:38.591+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataValueAlt: 3520.0
+[2023-07-09T08:42:38.591+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.592+0000] {logging_mixin.py:149} INFO - Element at index 3, column DatavalueFootnote: 
+[2023-07-09T08:42:38.592+0000] {logging_mixin.py:149} INFO - Element at index 3, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.593+0000] {logging_mixin.py:149} INFO - Element at index 3, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.593+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.594+0000] {logging_mixin.py:149} INFO - Element at index 3, column Stratification1: Fem***
+[2023-07-09T08:42:38.594+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationCategory2: 
+[2023-07-09T08:42:38.595+0000] {logging_mixin.py:149} INFO - Element at index 3, column Stratification2: 
+[2023-07-09T08:42:38.595+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationCategory3: 
+[2023-07-09T08:42:38.596+0000] {logging_mixin.py:149} INFO - Element at index 3, column Stratification3: 
+[2023-07-09T08:42:38.596+0000] {logging_mixin.py:149} INFO - Element at index 3, column GeoLocation: POINT (-83.62758034599966 32.83968109300048)
+[2023-07-09T08:42:38.597+0000] {logging_mixin.py:149} INFO - Element at index 3, column ResponseID: 
+[2023-07-09T08:42:38.597+0000] {logging_mixin.py:149} INFO - Element at index 3, column LocationID: 13
+[2023-07-09T08:42:38.597+0000] {logging_mixin.py:149} INFO - Element at index 3, column TopicID: AST
+[2023-07-09T08:42:38.598+0000] {logging_mixin.py:149} INFO - Element at index 3, column QuestionID: AST3_1
+[2023-07-09T08:42:38.599+0000] {logging_mixin.py:149} INFO - Element at index 3, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.599+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.600+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationID1: GENF
+[2023-07-09T08:42:38.600+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.601+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationID2: 
+[2023-07-09T08:42:38.601+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.601+0000] {logging_mixin.py:149} INFO - Element at index 3, column StratificationID3: 
+[2023-07-09T08:42:38.602+0000] {logging_mixin.py:149} INFO - Element at index 4, column YearStart: 2010
+[2023-07-09T08:42:38.602+0000] {logging_mixin.py:149} INFO - Element at index 4, column YearEnd: 2010
+[2023-07-09T08:42:38.603+0000] {logging_mixin.py:149} INFO - Element at index 4, column LocationAbbr: MI
+[2023-07-09T08:42:38.604+0000] {logging_mixin.py:149} INFO - Element at index 4, column LocationDesc: Michigan
+[2023-07-09T08:42:38.604+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.605+0000] {logging_mixin.py:149} INFO - Element at index 4, column Topic: Asthma
+[2023-07-09T08:42:38.605+0000] {logging_mixin.py:149} INFO - Element at index 4, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.605+0000] {logging_mixin.py:149} INFO - Element at index 4, column Response: 
+[2023-07-09T08:42:38.606+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataValueUnit: 
+[2023-07-09T08:42:38.606+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataValueType: Number
+[2023-07-09T08:42:38.607+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataValue: 123.0
+[2023-07-09T08:42:38.607+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataValueAlt: 123.0
+[2023-07-09T08:42:38.608+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.609+0000] {logging_mixin.py:149} INFO - Element at index 4, column DatavalueFootnote: 
+[2023-07-09T08:42:38.609+0000] {logging_mixin.py:149} INFO - Element at index 4, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.610+0000] {logging_mixin.py:149} INFO - Element at index 4, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.611+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationCategory1: Race/Ethnicity
+[2023-07-09T08:42:38.612+0000] {logging_mixin.py:149} INFO - Element at index 4, column Stratification1: Hispanic
+[2023-07-09T08:42:38.612+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationCategory2: 
+[2023-07-09T08:42:38.612+0000] {logging_mixin.py:149} INFO - Element at index 4, column Stratification2: 
+[2023-07-09T08:42:38.613+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationCategory3: 
+[2023-07-09T08:42:38.613+0000] {logging_mixin.py:149} INFO - Element at index 4, column Stratification3: 
+[2023-07-09T08:42:38.614+0000] {logging_mixin.py:149} INFO - Element at index 4, column GeoLocation: POINT (-84.71439026999968 44.6613195430005)
+[2023-07-09T08:42:38.614+0000] {logging_mixin.py:149} INFO - Element at index 4, column ResponseID: 
+[2023-07-09T08:42:38.614+0000] {logging_mixin.py:149} INFO - Element at index 4, column LocationID: 26
+[2023-07-09T08:42:38.615+0000] {logging_mixin.py:149} INFO - Element at index 4, column TopicID: AST
+[2023-07-09T08:42:38.615+0000] {logging_mixin.py:149} INFO - Element at index 4, column QuestionID: AST3_1
+[2023-07-09T08:42:38.616+0000] {logging_mixin.py:149} INFO - Element at index 4, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.616+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationCategoryID1: RACE
+[2023-07-09T08:42:38.616+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationID1: HIS
+[2023-07-09T08:42:38.617+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.617+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationID2: 
+[2023-07-09T08:42:38.618+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.618+0000] {logging_mixin.py:149} INFO - Element at index 4, column StratificationID3: 
+[2023-07-09T08:42:38.619+0000] {logging_mixin.py:149} INFO - Element at index 5, column YearStart: 2015
+[2023-07-09T08:42:38.619+0000] {logging_mixin.py:149} INFO - Element at index 5, column YearEnd: 2015
+[2023-07-09T08:42:38.619+0000] {logging_mixin.py:149} INFO - Element at index 5, column LocationAbbr: MT
+[2023-07-09T08:42:38.620+0000] {logging_mixin.py:149} INFO - Element at index 5, column LocationDesc: Montana
+[2023-07-09T08:42:38.620+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.621+0000] {logging_mixin.py:149} INFO - Element at index 5, column Topic: Asthma
+[2023-07-09T08:42:38.621+0000] {logging_mixin.py:149} INFO - Element at index 5, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.622+0000] {logging_mixin.py:149} INFO - Element at index 5, column Response: 
+[2023-07-09T08:42:38.622+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataValueUnit: 
+[2023-07-09T08:42:38.622+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataValueType: Number
+[2023-07-09T08:42:38.623+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataValue: nan
+[2023-07-09T08:42:38.623+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataValueAlt: nan
+[2023-07-09T08:42:38.623+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataValueFootnoteSymbol: -
+[2023-07-09T08:42:38.624+0000] {logging_mixin.py:149} INFO - Element at index 5, column DatavalueFootnote: No data available
+[2023-07-09T08:42:38.625+0000] {logging_mixin.py:149} INFO - Element at index 5, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.625+0000] {logging_mixin.py:149} INFO - Element at index 5, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.625+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationCategory1: Race/Ethnicity
+[2023-07-09T08:42:38.626+0000] {logging_mixin.py:149} INFO - Element at index 5, column Stratification1: Hispanic
+[2023-07-09T08:42:38.626+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationCategory2: 
+[2023-07-09T08:42:38.627+0000] {logging_mixin.py:149} INFO - Element at index 5, column Stratification2: 
+[2023-07-09T08:42:38.627+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationCategory3: 
+[2023-07-09T08:42:38.627+0000] {logging_mixin.py:149} INFO - Element at index 5, column Stratification3: 
+[2023-07-09T08:42:38.628+0000] {logging_mixin.py:149} INFO - Element at index 5, column GeoLocation: POINT (-109.42442064499971 47.06652897200047)
+[2023-07-09T08:42:38.628+0000] {logging_mixin.py:149} INFO - Element at index 5, column ResponseID: 
+[2023-07-09T08:42:38.628+0000] {logging_mixin.py:149} INFO - Element at index 5, column LocationID: 30
+[2023-07-09T08:42:38.629+0000] {logging_mixin.py:149} INFO - Element at index 5, column TopicID: AST
+[2023-07-09T08:42:38.629+0000] {logging_mixin.py:149} INFO - Element at index 5, column QuestionID: AST3_1
+[2023-07-09T08:42:38.630+0000] {logging_mixin.py:149} INFO - Element at index 5, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.630+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationCategoryID1: RACE
+[2023-07-09T08:42:38.630+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationID1: HIS
+[2023-07-09T08:42:38.631+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.631+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationID2: 
+[2023-07-09T08:42:38.632+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.632+0000] {logging_mixin.py:149} INFO - Element at index 5, column StratificationID3: 
+[2023-07-09T08:42:38.633+0000] {logging_mixin.py:149} INFO - Element at index 6, column YearStart: 2013
+[2023-07-09T08:42:38.633+0000] {logging_mixin.py:149} INFO - Element at index 6, column YearEnd: 2013
+[2023-07-09T08:42:38.633+0000] {logging_mixin.py:149} INFO - Element at index 6, column LocationAbbr: OR
+[2023-07-09T08:42:38.634+0000] {logging_mixin.py:149} INFO - Element at index 6, column LocationDesc: Oregon
+[2023-07-09T08:42:38.634+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.635+0000] {logging_mixin.py:149} INFO - Element at index 6, column Topic: Asthma
+[2023-07-09T08:42:38.635+0000] {logging_mixin.py:149} INFO - Element at index 6, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.635+0000] {logging_mixin.py:149} INFO - Element at index 6, column Response: 
+[2023-07-09T08:42:38.636+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataValueUnit: 
+[2023-07-09T08:42:38.636+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataValueType: Number
+[2023-07-09T08:42:38.637+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataValue: 760.0
+[2023-07-09T08:42:38.637+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataValueAlt: 760.0
+[2023-07-09T08:42:38.637+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.638+0000] {logging_mixin.py:149} INFO - Element at index 6, column DatavalueFootnote: 
+[2023-07-09T08:42:38.638+0000] {logging_mixin.py:149} INFO - Element at index 6, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.639+0000] {logging_mixin.py:149} INFO - Element at index 6, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.639+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.640+0000] {logging_mixin.py:149} INFO - Element at index 6, column Stratification1: M***
+[2023-07-09T08:42:38.640+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationCategory2: 
+[2023-07-09T08:42:38.640+0000] {logging_mixin.py:149} INFO - Element at index 6, column Stratification2: 
+[2023-07-09T08:42:38.641+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationCategory3: 
+[2023-07-09T08:42:38.641+0000] {logging_mixin.py:149} INFO - Element at index 6, column Stratification3: 
+[2023-07-09T08:42:38.642+0000] {logging_mixin.py:149} INFO - Element at index 6, column GeoLocation: POINT (-120.15503132599969 44.56744942400047)
+[2023-07-09T08:42:38.642+0000] {logging_mixin.py:149} INFO - Element at index 6, column ResponseID: 
+[2023-07-09T08:42:38.642+0000] {logging_mixin.py:149} INFO - Element at index 6, column LocationID: 41
+[2023-07-09T08:42:38.643+0000] {logging_mixin.py:149} INFO - Element at index 6, column TopicID: AST
+[2023-07-09T08:42:38.643+0000] {logging_mixin.py:149} INFO - Element at index 6, column QuestionID: AST3_1
+[2023-07-09T08:42:38.643+0000] {logging_mixin.py:149} INFO - Element at index 6, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.644+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.644+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationID1: GENM
+[2023-07-09T08:42:38.645+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.645+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationID2: 
+[2023-07-09T08:42:38.646+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.646+0000] {logging_mixin.py:149} INFO - Element at index 6, column StratificationID3: 
+[2023-07-09T08:42:38.646+0000] {logging_mixin.py:149} INFO - Element at index 7, column YearStart: 2013
+[2023-07-09T08:42:38.647+0000] {logging_mixin.py:149} INFO - Element at index 7, column YearEnd: 2013
+[2023-07-09T08:42:38.647+0000] {logging_mixin.py:149} INFO - Element at index 7, column LocationAbbr: PR
+[2023-07-09T08:42:38.648+0000] {logging_mixin.py:149} INFO - Element at index 7, column LocationDesc: Puerto Rico
+[2023-07-09T08:42:38.648+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.648+0000] {logging_mixin.py:149} INFO - Element at index 7, column Topic: Asthma
+[2023-07-09T08:42:38.649+0000] {logging_mixin.py:149} INFO - Element at index 7, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.649+0000] {logging_mixin.py:149} INFO - Element at index 7, column Response: 
+[2023-07-09T08:42:38.649+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataValueUnit: 
+[2023-07-09T08:42:38.650+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataValueType: Number
+[2023-07-09T08:42:38.650+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataValue: nan
+[2023-07-09T08:42:38.651+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataValueAlt: nan
+[2023-07-09T08:42:38.651+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataValueFootnoteSymbol: -
+[2023-07-09T08:42:38.652+0000] {logging_mixin.py:149} INFO - Element at index 7, column DatavalueFootnote: No data available
+[2023-07-09T08:42:38.652+0000] {logging_mixin.py:149} INFO - Element at index 7, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.652+0000] {logging_mixin.py:149} INFO - Element at index 7, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.653+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.653+0000] {logging_mixin.py:149} INFO - Element at index 7, column Stratification1: Overall
+[2023-07-09T08:42:38.654+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationCategory2: 
+[2023-07-09T08:42:38.654+0000] {logging_mixin.py:149} INFO - Element at index 7, column Stratification2: 
+[2023-07-09T08:42:38.654+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationCategory3: 
+[2023-07-09T08:42:38.655+0000] {logging_mixin.py:149} INFO - Element at index 7, column Stratification3: 
+[2023-07-09T08:42:38.655+0000] {logging_mixin.py:149} INFO - Element at index 7, column GeoLocation: POINT (-66.590149 18.220833)
+[2023-07-09T08:42:38.656+0000] {logging_mixin.py:149} INFO - Element at index 7, column ResponseID: 
+[2023-07-09T08:42:38.656+0000] {logging_mixin.py:149} INFO - Element at index 7, column LocationID: 72
+[2023-07-09T08:42:38.656+0000] {logging_mixin.py:149} INFO - Element at index 7, column TopicID: AST
+[2023-07-09T08:42:38.657+0000] {logging_mixin.py:149} INFO - Element at index 7, column QuestionID: AST3_1
+[2023-07-09T08:42:38.657+0000] {logging_mixin.py:149} INFO - Element at index 7, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.658+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.658+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationID1: OVR
+[2023-07-09T08:42:38.658+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.659+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationID2: 
+[2023-07-09T08:42:38.659+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.660+0000] {logging_mixin.py:149} INFO - Element at index 7, column StratificationID3: 
+[2023-07-09T08:42:38.660+0000] {logging_mixin.py:149} INFO - Element at index 8, column YearStart: 2017
+[2023-07-09T08:42:38.661+0000] {logging_mixin.py:149} INFO - Element at index 8, column YearEnd: 2017
+[2023-07-09T08:42:38.661+0000] {logging_mixin.py:149} INFO - Element at index 8, column LocationAbbr: PR
+[2023-07-09T08:42:38.661+0000] {logging_mixin.py:149} INFO - Element at index 8, column LocationDesc: Puerto Rico
+[2023-07-09T08:42:38.662+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.663+0000] {logging_mixin.py:149} INFO - Element at index 8, column Topic: Asthma
+[2023-07-09T08:42:38.664+0000] {logging_mixin.py:149} INFO - Element at index 8, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.666+0000] {logging_mixin.py:149} INFO - Element at index 8, column Response: 
+[2023-07-09T08:42:38.667+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataValueUnit: 
+[2023-07-09T08:42:38.668+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataValueType: Number
+[2023-07-09T08:42:38.669+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataValue: nan
+[2023-07-09T08:42:38.669+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataValueAlt: nan
+[2023-07-09T08:42:38.670+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataValueFootnoteSymbol: -
+[2023-07-09T08:42:38.670+0000] {logging_mixin.py:149} INFO - Element at index 8, column DatavalueFootnote: No data available
+[2023-07-09T08:42:38.671+0000] {logging_mixin.py:149} INFO - Element at index 8, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.671+0000] {logging_mixin.py:149} INFO - Element at index 8, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.672+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.673+0000] {logging_mixin.py:149} INFO - Element at index 8, column Stratification1: Overall
+[2023-07-09T08:42:38.673+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationCategory2: 
+[2023-07-09T08:42:38.674+0000] {logging_mixin.py:149} INFO - Element at index 8, column Stratification2: 
+[2023-07-09T08:42:38.674+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationCategory3: 
+[2023-07-09T08:42:38.675+0000] {logging_mixin.py:149} INFO - Element at index 8, column Stratification3: 
+[2023-07-09T08:42:38.675+0000] {logging_mixin.py:149} INFO - Element at index 8, column GeoLocation: POINT (-66.590149 18.220833)
+[2023-07-09T08:42:38.676+0000] {logging_mixin.py:149} INFO - Element at index 8, column ResponseID: 
+[2023-07-09T08:42:38.676+0000] {logging_mixin.py:149} INFO - Element at index 8, column LocationID: 72
+[2023-07-09T08:42:38.677+0000] {logging_mixin.py:149} INFO - Element at index 8, column TopicID: AST
+[2023-07-09T08:42:38.677+0000] {logging_mixin.py:149} INFO - Element at index 8, column QuestionID: AST3_1
+[2023-07-09T08:42:38.677+0000] {logging_mixin.py:149} INFO - Element at index 8, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.678+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.678+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationID1: OVR
+[2023-07-09T08:42:38.679+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.680+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationID2: 
+[2023-07-09T08:42:38.680+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.681+0000] {logging_mixin.py:149} INFO - Element at index 8, column StratificationID3: 
+[2023-07-09T08:42:38.682+0000] {logging_mixin.py:149} INFO - Element at index 9, column YearStart: 2010
+[2023-07-09T08:42:38.682+0000] {logging_mixin.py:149} INFO - Element at index 9, column YearEnd: 2010
+[2023-07-09T08:42:38.683+0000] {logging_mixin.py:149} INFO - Element at index 9, column LocationAbbr: WI
+[2023-07-09T08:42:38.684+0000] {logging_mixin.py:149} INFO - Element at index 9, column LocationDesc: Wisconsin
+[2023-07-09T08:42:38.684+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.685+0000] {logging_mixin.py:149} INFO - Element at index 9, column Topic: Asthma
+[2023-07-09T08:42:38.686+0000] {logging_mixin.py:149} INFO - Element at index 9, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.687+0000] {logging_mixin.py:149} INFO - Element at index 9, column Response: 
+[2023-07-09T08:42:38.688+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataValueUnit: 
+[2023-07-09T08:42:38.689+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataValueType: Number
+[2023-07-09T08:42:38.689+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataValue: 1967.0
+[2023-07-09T08:42:38.690+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataValueAlt: 1967.0
+[2023-07-09T08:42:38.691+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.691+0000] {logging_mixin.py:149} INFO - Element at index 9, column DatavalueFootnote: 
+[2023-07-09T08:42:38.692+0000] {logging_mixin.py:149} INFO - Element at index 9, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.692+0000] {logging_mixin.py:149} INFO - Element at index 9, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.693+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.694+0000] {logging_mixin.py:149} INFO - Element at index 9, column Stratification1: M***
+[2023-07-09T08:42:38.695+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationCategory2: 
+[2023-07-09T08:42:38.695+0000] {logging_mixin.py:149} INFO - Element at index 9, column Stratification2: 
+[2023-07-09T08:42:38.696+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationCategory3: 
+[2023-07-09T08:42:38.696+0000] {logging_mixin.py:149} INFO - Element at index 9, column Stratification3: 
+[2023-07-09T08:42:38.697+0000] {logging_mixin.py:149} INFO - Element at index 9, column GeoLocation: POINT (-89.81637074199966 44.39319117400049)
+[2023-07-09T08:42:38.697+0000] {logging_mixin.py:149} INFO - Element at index 9, column ResponseID: 
+[2023-07-09T08:42:38.698+0000] {logging_mixin.py:149} INFO - Element at index 9, column LocationID: 55
+[2023-07-09T08:42:38.698+0000] {logging_mixin.py:149} INFO - Element at index 9, column TopicID: AST
+[2023-07-09T08:42:38.699+0000] {logging_mixin.py:149} INFO - Element at index 9, column QuestionID: AST3_1
+[2023-07-09T08:42:38.699+0000] {logging_mixin.py:149} INFO - Element at index 9, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.699+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.700+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationID1: GENM
+[2023-07-09T08:42:38.701+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.701+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationID2: 
+[2023-07-09T08:42:38.702+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.702+0000] {logging_mixin.py:149} INFO - Element at index 9, column StratificationID3: 
+[2023-07-09T08:42:38.703+0000] {logging_mixin.py:149} INFO - Element at index 10, column YearStart: 2016
+[2023-07-09T08:42:38.703+0000] {logging_mixin.py:149} INFO - Element at index 10, column YearEnd: 2016
+[2023-07-09T08:42:38.703+0000] {logging_mixin.py:149} INFO - Element at index 10, column LocationAbbr: WI
+[2023-07-09T08:42:38.704+0000] {logging_mixin.py:149} INFO - Element at index 10, column LocationDesc: Wisconsin
+[2023-07-09T08:42:38.704+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataSource: SEDD; SID
+[2023-07-09T08:42:38.705+0000] {logging_mixin.py:149} INFO - Element at index 10, column Topic: Asthma
+[2023-07-09T08:42:38.705+0000] {logging_mixin.py:149} INFO - Element at index 10, column Question: Hospitalizations for asthma
+[2023-07-09T08:42:38.706+0000] {logging_mixin.py:149} INFO - Element at index 10, column Response: 
+[2023-07-09T08:42:38.706+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataValueUnit: 
+[2023-07-09T08:42:38.706+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataValueType: Number
+[2023-07-09T08:42:38.707+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataValue: 110.0
+[2023-07-09T08:42:38.707+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataValueAlt: 110.0
+[2023-07-09T08:42:38.708+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.708+0000] {logging_mixin.py:149} INFO - Element at index 10, column DatavalueFootnote: 
+[2023-07-09T08:42:38.709+0000] {logging_mixin.py:149} INFO - Element at index 10, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.709+0000] {logging_mixin.py:149} INFO - Element at index 10, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.709+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationCategory1: Race/Ethnicity
+[2023-07-09T08:42:38.710+0000] {logging_mixin.py:149} INFO - Element at index 10, column Stratification1: Hispanic
+[2023-07-09T08:42:38.710+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationCategory2: 
+[2023-07-09T08:42:38.711+0000] {logging_mixin.py:149} INFO - Element at index 10, column Stratification2: 
+[2023-07-09T08:42:38.711+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationCategory3: 
+[2023-07-09T08:42:38.711+0000] {logging_mixin.py:149} INFO - Element at index 10, column Stratification3: 
+[2023-07-09T08:42:38.712+0000] {logging_mixin.py:149} INFO - Element at index 10, column GeoLocation: POINT (-89.81637074199966 44.39319117400049)
+[2023-07-09T08:42:38.712+0000] {logging_mixin.py:149} INFO - Element at index 10, column ResponseID: 
+[2023-07-09T08:42:38.713+0000] {logging_mixin.py:149} INFO - Element at index 10, column LocationID: 55
+[2023-07-09T08:42:38.713+0000] {logging_mixin.py:149} INFO - Element at index 10, column TopicID: AST
+[2023-07-09T08:42:38.714+0000] {logging_mixin.py:149} INFO - Element at index 10, column QuestionID: AST3_1
+[2023-07-09T08:42:38.714+0000] {logging_mixin.py:149} INFO - Element at index 10, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.715+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationCategoryID1: RACE
+[2023-07-09T08:42:38.715+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationID1: HIS
+[2023-07-09T08:42:38.716+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.716+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationID2: 
+[2023-07-09T08:42:38.716+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.717+0000] {logging_mixin.py:149} INFO - Element at index 10, column StratificationID3: 
+[2023-07-09T08:42:38.717+0000] {logging_mixin.py:149} INFO - Element at index 11, column YearStart: 2014
+[2023-07-09T08:42:38.718+0000] {logging_mixin.py:149} INFO - Element at index 11, column YearEnd: 2014
+[2023-07-09T08:42:38.718+0000] {logging_mixin.py:149} INFO - Element at index 11, column LocationAbbr: AL
+[2023-07-09T08:42:38.719+0000] {logging_mixin.py:149} INFO - Element at index 11, column LocationDesc: Alabama
+[2023-07-09T08:42:38.719+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataSource: NVSS
+[2023-07-09T08:42:38.719+0000] {logging_mixin.py:149} INFO - Element at index 11, column Topic: Asthma
+[2023-07-09T08:42:38.720+0000] {logging_mixin.py:149} INFO - Element at index 11, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.720+0000] {logging_mixin.py:149} INFO - Element at index 11, column Response: 
+[2023-07-09T08:42:38.720+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataValueUnit: 
+[2023-07-09T08:42:38.721+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataValueType: Number
+[2023-07-09T08:42:38.722+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataValue: 22.0
+[2023-07-09T08:42:38.722+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataValueAlt: 22.0
+[2023-07-09T08:42:38.722+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.723+0000] {logging_mixin.py:149} INFO - Element at index 11, column DatavalueFootnote: 
+[2023-07-09T08:42:38.723+0000] {logging_mixin.py:149} INFO - Element at index 11, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.724+0000] {logging_mixin.py:149} INFO - Element at index 11, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.724+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.725+0000] {logging_mixin.py:149} INFO - Element at index 11, column Stratification1: M***
+[2023-07-09T08:42:38.725+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationCategory2: 
+[2023-07-09T08:42:38.725+0000] {logging_mixin.py:149} INFO - Element at index 11, column Stratification2: 
+[2023-07-09T08:42:38.726+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationCategory3: 
+[2023-07-09T08:42:38.726+0000] {logging_mixin.py:149} INFO - Element at index 11, column Stratification3: 
+[2023-07-09T08:42:38.727+0000] {logging_mixin.py:149} INFO - Element at index 11, column GeoLocation: POINT (-86.63186076199969 32.84057112200048)
+[2023-07-09T08:42:38.727+0000] {logging_mixin.py:149} INFO - Element at index 11, column ResponseID: 
+[2023-07-09T08:42:38.727+0000] {logging_mixin.py:149} INFO - Element at index 11, column LocationID: 1
+[2023-07-09T08:42:38.728+0000] {logging_mixin.py:149} INFO - Element at index 11, column TopicID: AST
+[2023-07-09T08:42:38.728+0000] {logging_mixin.py:149} INFO - Element at index 11, column QuestionID: AST4_1
+[2023-07-09T08:42:38.729+0000] {logging_mixin.py:149} INFO - Element at index 11, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.729+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.730+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationID1: GENM
+[2023-07-09T08:42:38.730+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.730+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationID2: 
+[2023-07-09T08:42:38.731+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.731+0000] {logging_mixin.py:149} INFO - Element at index 11, column StratificationID3: 
+[2023-07-09T08:42:38.732+0000] {logging_mixin.py:149} INFO - Element at index 12, column YearStart: 2015
+[2023-07-09T08:42:38.732+0000] {logging_mixin.py:149} INFO - Element at index 12, column YearEnd: 2015
+[2023-07-09T08:42:38.733+0000] {logging_mixin.py:149} INFO - Element at index 12, column LocationAbbr: ID
+[2023-07-09T08:42:38.733+0000] {logging_mixin.py:149} INFO - Element at index 12, column LocationDesc: Idaho
+[2023-07-09T08:42:38.733+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataSource: NVSS
+[2023-07-09T08:42:38.734+0000] {logging_mixin.py:149} INFO - Element at index 12, column Topic: Asthma
+[2023-07-09T08:42:38.734+0000] {logging_mixin.py:149} INFO - Element at index 12, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.735+0000] {logging_mixin.py:149} INFO - Element at index 12, column Response: 
+[2023-07-09T08:42:38.735+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataValueUnit: 
+[2023-07-09T08:42:38.736+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataValueType: Number
+[2023-07-09T08:42:38.736+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataValue: 21.0
+[2023-07-09T08:42:38.737+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataValueAlt: 21.0
+[2023-07-09T08:42:38.737+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.737+0000] {logging_mixin.py:149} INFO - Element at index 12, column DatavalueFootnote: 
+[2023-07-09T08:42:38.738+0000] {logging_mixin.py:149} INFO - Element at index 12, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.738+0000] {logging_mixin.py:149} INFO - Element at index 12, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.738+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.739+0000] {logging_mixin.py:149} INFO - Element at index 12, column Stratification1: Overall
+[2023-07-09T08:42:38.739+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationCategory2: 
+[2023-07-09T08:42:38.740+0000] {logging_mixin.py:149} INFO - Element at index 12, column Stratification2: 
+[2023-07-09T08:42:38.740+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationCategory3: 
+[2023-07-09T08:42:38.740+0000] {logging_mixin.py:149} INFO - Element at index 12, column Stratification3: 
+[2023-07-09T08:42:38.741+0000] {logging_mixin.py:149} INFO - Element at index 12, column GeoLocation: POINT (-114.3637300419997 43.682630005000476)
+[2023-07-09T08:42:38.741+0000] {logging_mixin.py:149} INFO - Element at index 12, column ResponseID: 
+[2023-07-09T08:42:38.742+0000] {logging_mixin.py:149} INFO - Element at index 12, column LocationID: 16
+[2023-07-09T08:42:38.742+0000] {logging_mixin.py:149} INFO - Element at index 12, column TopicID: AST
+[2023-07-09T08:42:38.743+0000] {logging_mixin.py:149} INFO - Element at index 12, column QuestionID: AST4_1
+[2023-07-09T08:42:38.743+0000] {logging_mixin.py:149} INFO - Element at index 12, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.744+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.744+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationID1: OVR
+[2023-07-09T08:42:38.744+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.745+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationID2: 
+[2023-07-09T08:42:38.745+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.746+0000] {logging_mixin.py:149} INFO - Element at index 12, column StratificationID3: 
+[2023-07-09T08:42:38.747+0000] {logging_mixin.py:149} INFO - Element at index 13, column YearStart: 2016
+[2023-07-09T08:42:38.747+0000] {logging_mixin.py:149} INFO - Element at index 13, column YearEnd: 2016
+[2023-07-09T08:42:38.748+0000] {logging_mixin.py:149} INFO - Element at index 13, column LocationAbbr: ID
+[2023-07-09T08:42:38.748+0000] {logging_mixin.py:149} INFO - Element at index 13, column LocationDesc: Idaho
+[2023-07-09T08:42:38.749+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataSource: NVSS
+[2023-07-09T08:42:38.749+0000] {logging_mixin.py:149} INFO - Element at index 13, column Topic: Asthma
+[2023-07-09T08:42:38.750+0000] {logging_mixin.py:149} INFO - Element at index 13, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.750+0000] {logging_mixin.py:149} INFO - Element at index 13, column Response: 
+[2023-07-09T08:42:38.751+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataValueUnit: 
+[2023-07-09T08:42:38.751+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataValueType: Number
+[2023-07-09T08:42:38.751+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataValue: 21.0
+[2023-07-09T08:42:38.752+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataValueAlt: 21.0
+[2023-07-09T08:42:38.752+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.753+0000] {logging_mixin.py:149} INFO - Element at index 13, column DatavalueFootnote: 
+[2023-07-09T08:42:38.753+0000] {logging_mixin.py:149} INFO - Element at index 13, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.753+0000] {logging_mixin.py:149} INFO - Element at index 13, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.754+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.754+0000] {logging_mixin.py:149} INFO - Element at index 13, column Stratification1: Overall
+[2023-07-09T08:42:38.755+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationCategory2: 
+[2023-07-09T08:42:38.755+0000] {logging_mixin.py:149} INFO - Element at index 13, column Stratification2: 
+[2023-07-09T08:42:38.756+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationCategory3: 
+[2023-07-09T08:42:38.756+0000] {logging_mixin.py:149} INFO - Element at index 13, column Stratification3: 
+[2023-07-09T08:42:38.757+0000] {logging_mixin.py:149} INFO - Element at index 13, column GeoLocation: POINT (-114.3637300419997 43.682630005000476)
+[2023-07-09T08:42:38.757+0000] {logging_mixin.py:149} INFO - Element at index 13, column ResponseID: 
+[2023-07-09T08:42:38.757+0000] {logging_mixin.py:149} INFO - Element at index 13, column LocationID: 16
+[2023-07-09T08:42:38.758+0000] {logging_mixin.py:149} INFO - Element at index 13, column TopicID: AST
+[2023-07-09T08:42:38.758+0000] {logging_mixin.py:149} INFO - Element at index 13, column QuestionID: AST4_1
+[2023-07-09T08:42:38.758+0000] {logging_mixin.py:149} INFO - Element at index 13, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.759+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.759+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationID1: OVR
+[2023-07-09T08:42:38.760+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.760+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationID2: 
+[2023-07-09T08:42:38.761+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.762+0000] {logging_mixin.py:149} INFO - Element at index 13, column StratificationID3: 
+[2023-07-09T08:42:38.762+0000] {logging_mixin.py:149} INFO - Element at index 14, column YearStart: 2020
+[2023-07-09T08:42:38.763+0000] {logging_mixin.py:149} INFO - Element at index 14, column YearEnd: 2020
+[2023-07-09T08:42:38.763+0000] {logging_mixin.py:149} INFO - Element at index 14, column LocationAbbr: IL
+[2023-07-09T08:42:38.764+0000] {logging_mixin.py:149} INFO - Element at index 14, column LocationDesc: Illinois
+[2023-07-09T08:42:38.764+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataSource: NVSS
+[2023-07-09T08:42:38.765+0000] {logging_mixin.py:149} INFO - Element at index 14, column Topic: Asthma
+[2023-07-09T08:42:38.765+0000] {logging_mixin.py:149} INFO - Element at index 14, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.766+0000] {logging_mixin.py:149} INFO - Element at index 14, column Response: 
+[2023-07-09T08:42:38.766+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataValueUnit: Number
+[2023-07-09T08:42:38.766+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataValueType: Number
+[2023-07-09T08:42:38.767+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataValue: 89.0
+[2023-07-09T08:42:38.767+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataValueAlt: 89.0
+[2023-07-09T08:42:38.768+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.768+0000] {logging_mixin.py:149} INFO - Element at index 14, column DatavalueFootnote: 
+[2023-07-09T08:42:38.769+0000] {logging_mixin.py:149} INFO - Element at index 14, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.769+0000] {logging_mixin.py:149} INFO - Element at index 14, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.769+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.770+0000] {logging_mixin.py:149} INFO - Element at index 14, column Stratification1: M***
+[2023-07-09T08:42:38.770+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationCategory2: 
+[2023-07-09T08:42:38.771+0000] {logging_mixin.py:149} INFO - Element at index 14, column Stratification2: 
+[2023-07-09T08:42:38.771+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationCategory3: 
+[2023-07-09T08:42:38.772+0000] {logging_mixin.py:149} INFO - Element at index 14, column Stratification3: 
+[2023-07-09T08:42:38.772+0000] {logging_mixin.py:149} INFO - Element at index 14, column GeoLocation: POINT (-88.99771017799969 40.48501028300046)
+[2023-07-09T08:42:38.772+0000] {logging_mixin.py:149} INFO - Element at index 14, column ResponseID: 
+[2023-07-09T08:42:38.773+0000] {logging_mixin.py:149} INFO - Element at index 14, column LocationID: 17
+[2023-07-09T08:42:38.773+0000] {logging_mixin.py:149} INFO - Element at index 14, column TopicID: AST
+[2023-07-09T08:42:38.773+0000] {logging_mixin.py:149} INFO - Element at index 14, column QuestionID: AST4_1
+[2023-07-09T08:42:38.774+0000] {logging_mixin.py:149} INFO - Element at index 14, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.774+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.775+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationID1: GENM
+[2023-07-09T08:42:38.775+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.776+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationID2: 
+[2023-07-09T08:42:38.776+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.777+0000] {logging_mixin.py:149} INFO - Element at index 14, column StratificationID3: 
+[2023-07-09T08:42:38.777+0000] {logging_mixin.py:149} INFO - Element at index 15, column YearStart: 2012
+[2023-07-09T08:42:38.778+0000] {logging_mixin.py:149} INFO - Element at index 15, column YearEnd: 2012
+[2023-07-09T08:42:38.778+0000] {logging_mixin.py:149} INFO - Element at index 15, column LocationAbbr: KS
+[2023-07-09T08:42:38.779+0000] {logging_mixin.py:149} INFO - Element at index 15, column LocationDesc: Kansas
+[2023-07-09T08:42:38.779+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataSource: NVSS
+[2023-07-09T08:42:38.780+0000] {logging_mixin.py:149} INFO - Element at index 15, column Topic: Asthma
+[2023-07-09T08:42:38.780+0000] {logging_mixin.py:149} INFO - Element at index 15, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.780+0000] {logging_mixin.py:149} INFO - Element at index 15, column Response: 
+[2023-07-09T08:42:38.781+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataValueUnit: 
+[2023-07-09T08:42:38.781+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataValueType: Number
+[2023-07-09T08:42:38.782+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataValue: 24.0
+[2023-07-09T08:42:38.782+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataValueAlt: 24.0
+[2023-07-09T08:42:38.782+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.783+0000] {logging_mixin.py:149} INFO - Element at index 15, column DatavalueFootnote: 
+[2023-07-09T08:42:38.784+0000] {logging_mixin.py:149} INFO - Element at index 15, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.784+0000] {logging_mixin.py:149} INFO - Element at index 15, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.785+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationCategory1: Race/Ethnicity
+[2023-07-09T08:42:38.786+0000] {logging_mixin.py:149} INFO - Element at index 15, column Stratification1: White, non-Hispanic
+[2023-07-09T08:42:38.786+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationCategory2: 
+[2023-07-09T08:42:38.787+0000] {logging_mixin.py:149} INFO - Element at index 15, column Stratification2: 
+[2023-07-09T08:42:38.787+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationCategory3: 
+[2023-07-09T08:42:38.787+0000] {logging_mixin.py:149} INFO - Element at index 15, column Stratification3: 
+[2023-07-09T08:42:38.788+0000] {logging_mixin.py:149} INFO - Element at index 15, column GeoLocation: POINT (-98.20078122699965 38.34774030000045)
+[2023-07-09T08:42:38.788+0000] {logging_mixin.py:149} INFO - Element at index 15, column ResponseID: 
+[2023-07-09T08:42:38.789+0000] {logging_mixin.py:149} INFO - Element at index 15, column LocationID: 20
+[2023-07-09T08:42:38.789+0000] {logging_mixin.py:149} INFO - Element at index 15, column TopicID: AST
+[2023-07-09T08:42:38.789+0000] {logging_mixin.py:149} INFO - Element at index 15, column QuestionID: AST4_1
+[2023-07-09T08:42:38.790+0000] {logging_mixin.py:149} INFO - Element at index 15, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.791+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationCategoryID1: RACE
+[2023-07-09T08:42:38.791+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationID1: WHT
+[2023-07-09T08:42:38.792+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.792+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationID2: 
+[2023-07-09T08:42:38.793+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.794+0000] {logging_mixin.py:149} INFO - Element at index 15, column StratificationID3: 
+[2023-07-09T08:42:38.794+0000] {logging_mixin.py:149} INFO - Element at index 16, column YearStart: 2015
+[2023-07-09T08:42:38.795+0000] {logging_mixin.py:149} INFO - Element at index 16, column YearEnd: 2015
+[2023-07-09T08:42:38.795+0000] {logging_mixin.py:149} INFO - Element at index 16, column LocationAbbr: KS
+[2023-07-09T08:42:38.796+0000] {logging_mixin.py:149} INFO - Element at index 16, column LocationDesc: Kansas
+[2023-07-09T08:42:38.796+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataSource: NVSS
+[2023-07-09T08:42:38.796+0000] {logging_mixin.py:149} INFO - Element at index 16, column Topic: Asthma
+[2023-07-09T08:42:38.797+0000] {logging_mixin.py:149} INFO - Element at index 16, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.798+0000] {logging_mixin.py:149} INFO - Element at index 16, column Response: 
+[2023-07-09T08:42:38.798+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataValueUnit: 
+[2023-07-09T08:42:38.799+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataValueType: Number
+[2023-07-09T08:42:38.799+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataValue: 29.0
+[2023-07-09T08:42:38.800+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataValueAlt: 29.0
+[2023-07-09T08:42:38.800+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.801+0000] {logging_mixin.py:149} INFO - Element at index 16, column DatavalueFootnote: 
+[2023-07-09T08:42:38.801+0000] {logging_mixin.py:149} INFO - Element at index 16, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.802+0000] {logging_mixin.py:149} INFO - Element at index 16, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.802+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.803+0000] {logging_mixin.py:149} INFO - Element at index 16, column Stratification1: Overall
+[2023-07-09T08:42:38.803+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationCategory2: 
+[2023-07-09T08:42:38.803+0000] {logging_mixin.py:149} INFO - Element at index 16, column Stratification2: 
+[2023-07-09T08:42:38.804+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationCategory3: 
+[2023-07-09T08:42:38.805+0000] {logging_mixin.py:149} INFO - Element at index 16, column Stratification3: 
+[2023-07-09T08:42:38.805+0000] {logging_mixin.py:149} INFO - Element at index 16, column GeoLocation: POINT (-98.20078122699965 38.34774030000045)
+[2023-07-09T08:42:38.806+0000] {logging_mixin.py:149} INFO - Element at index 16, column ResponseID: 
+[2023-07-09T08:42:38.806+0000] {logging_mixin.py:149} INFO - Element at index 16, column LocationID: 20
+[2023-07-09T08:42:38.807+0000] {logging_mixin.py:149} INFO - Element at index 16, column TopicID: AST
+[2023-07-09T08:42:38.807+0000] {logging_mixin.py:149} INFO - Element at index 16, column QuestionID: AST4_1
+[2023-07-09T08:42:38.807+0000] {logging_mixin.py:149} INFO - Element at index 16, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.808+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.809+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationID1: OVR
+[2023-07-09T08:42:38.809+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.810+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationID2: 
+[2023-07-09T08:42:38.810+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.811+0000] {logging_mixin.py:149} INFO - Element at index 16, column StratificationID3: 
+[2023-07-09T08:42:38.812+0000] {logging_mixin.py:149} INFO - Element at index 17, column YearStart: 2018
+[2023-07-09T08:42:38.812+0000] {logging_mixin.py:149} INFO - Element at index 17, column YearEnd: 2018
+[2023-07-09T08:42:38.813+0000] {logging_mixin.py:149} INFO - Element at index 17, column LocationAbbr: KS
+[2023-07-09T08:42:38.813+0000] {logging_mixin.py:149} INFO - Element at index 17, column LocationDesc: Kansas
+[2023-07-09T08:42:38.813+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataSource: NVSS
+[2023-07-09T08:42:38.814+0000] {logging_mixin.py:149} INFO - Element at index 17, column Topic: Asthma
+[2023-07-09T08:42:38.814+0000] {logging_mixin.py:149} INFO - Element at index 17, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.815+0000] {logging_mixin.py:149} INFO - Element at index 17, column Response: 
+[2023-07-09T08:42:38.815+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataValueUnit: Number
+[2023-07-09T08:42:38.815+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataValueType: Number
+[2023-07-09T08:42:38.816+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataValue: 29.0
+[2023-07-09T08:42:38.817+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataValueAlt: 29.0
+[2023-07-09T08:42:38.817+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.818+0000] {logging_mixin.py:149} INFO - Element at index 17, column DatavalueFootnote: 
+[2023-07-09T08:42:38.819+0000] {logging_mixin.py:149} INFO - Element at index 17, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.819+0000] {logging_mixin.py:149} INFO - Element at index 17, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.820+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationCategory1: Overall
+[2023-07-09T08:42:38.820+0000] {logging_mixin.py:149} INFO - Element at index 17, column Stratification1: Overall
+[2023-07-09T08:42:38.820+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationCategory2: 
+[2023-07-09T08:42:38.821+0000] {logging_mixin.py:149} INFO - Element at index 17, column Stratification2: 
+[2023-07-09T08:42:38.821+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationCategory3: 
+[2023-07-09T08:42:38.822+0000] {logging_mixin.py:149} INFO - Element at index 17, column Stratification3: 
+[2023-07-09T08:42:38.822+0000] {logging_mixin.py:149} INFO - Element at index 17, column GeoLocation: POINT (-98.20078122699965 38.34774030000045)
+[2023-07-09T08:42:38.822+0000] {logging_mixin.py:149} INFO - Element at index 17, column ResponseID: 
+[2023-07-09T08:42:38.823+0000] {logging_mixin.py:149} INFO - Element at index 17, column LocationID: 20
+[2023-07-09T08:42:38.823+0000] {logging_mixin.py:149} INFO - Element at index 17, column TopicID: AST
+[2023-07-09T08:42:38.824+0000] {logging_mixin.py:149} INFO - Element at index 17, column QuestionID: AST4_1
+[2023-07-09T08:42:38.825+0000] {logging_mixin.py:149} INFO - Element at index 17, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.826+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationCategoryID1: OVERALL
+[2023-07-09T08:42:38.826+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationID1: OVR
+[2023-07-09T08:42:38.827+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.827+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationID2: 
+[2023-07-09T08:42:38.828+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.828+0000] {logging_mixin.py:149} INFO - Element at index 17, column StratificationID3: 
+[2023-07-09T08:42:38.829+0000] {logging_mixin.py:149} INFO - Element at index 18, column YearStart: 2017
+[2023-07-09T08:42:38.829+0000] {logging_mixin.py:149} INFO - Element at index 18, column YearEnd: 2017
+[2023-07-09T08:42:38.829+0000] {logging_mixin.py:149} INFO - Element at index 18, column LocationAbbr: LA
+[2023-07-09T08:42:38.830+0000] {logging_mixin.py:149} INFO - Element at index 18, column LocationDesc: Louisiana
+[2023-07-09T08:42:38.830+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataSource: NVSS
+[2023-07-09T08:42:38.831+0000] {logging_mixin.py:149} INFO - Element at index 18, column Topic: Asthma
+[2023-07-09T08:42:38.831+0000] {logging_mixin.py:149} INFO - Element at index 18, column Question: Asthma mortality rate
+[2023-07-09T08:42:38.831+0000] {logging_mixin.py:149} INFO - Element at index 18, column Response: 
+[2023-07-09T08:42:38.832+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataValueUnit: 
+[2023-07-09T08:42:38.833+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataValueType: Number
+[2023-07-09T08:42:38.834+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataValue: 21.0
+[2023-07-09T08:42:38.834+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataValueAlt: 21.0
+[2023-07-09T08:42:38.835+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataValueFootnoteSymbol: 
+[2023-07-09T08:42:38.835+0000] {logging_mixin.py:149} INFO - Element at index 18, column DatavalueFootnote: 
+[2023-07-09T08:42:38.836+0000] {logging_mixin.py:149} INFO - Element at index 18, column LowConfidenceLimit: 
+[2023-07-09T08:42:38.836+0000] {logging_mixin.py:149} INFO - Element at index 18, column HighConfidenceLimit: 
+[2023-07-09T08:42:38.836+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationCategory1: Gender
+[2023-07-09T08:42:38.837+0000] {logging_mixin.py:149} INFO - Element at index 18, column Stratification1: M***
+[2023-07-09T08:42:38.837+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationCategory2: 
+[2023-07-09T08:42:38.838+0000] {logging_mixin.py:149} INFO - Element at index 18, column Stratification2: 
+[2023-07-09T08:42:38.838+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationCategory3: 
+[2023-07-09T08:42:38.838+0000] {logging_mixin.py:149} INFO - Element at index 18, column Stratification3: 
+[2023-07-09T08:42:38.839+0000] {logging_mixin.py:149} INFO - Element at index 18, column GeoLocation: POINT (-92.44568007099969 31.31266064400046)
+[2023-07-09T08:42:38.840+0000] {logging_mixin.py:149} INFO - Element at index 18, column ResponseID: 
+[2023-07-09T08:42:38.841+0000] {logging_mixin.py:149} INFO - Element at index 18, column LocationID: 22
+[2023-07-09T08:42:38.842+0000] {logging_mixin.py:149} INFO - Element at index 18, column TopicID: AST
+[2023-07-09T08:42:38.842+0000] {logging_mixin.py:149} INFO - Element at index 18, column QuestionID: AST4_1
+[2023-07-09T08:42:38.842+0000] {logging_mixin.py:149} INFO - Element at index 18, column DataValueTypeID: NMBR
+[2023-07-09T08:42:38.843+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationCategoryID1: GENDER
+[2023-07-09T08:42:38.843+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationID1: GENM
+[2023-07-09T08:42:38.844+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationCategoryID2: 
+[2023-07-09T08:42:38.844+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationID2: 
+[2023-07-09T08:42:38.845+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationCategoryID3: 
+[2023-07-09T08:42:38.845+0000] {logging_mixin.py:149} INFO - Element at index 18, column StratificationID3: 
+[2023-07-09T08:42:38.845+0000] {python.py:183} INFO - Done. Returned value was:     YearStart  YearEnd  ... StratificationCategoryID3 StratificationID3
+0        2014     2014  ...                                            
+1        2018     2018  ...                                            
+2        2018     2018  ...                                            
+3        2017     2017  ...                                            
+4        2010     2010  ...                                            
+5        2015     2015  ...                                            
+6        2013     2013  ...                                            
+7        2013     2013  ...                                            
+8        2017     2017  ...                                            
+9        2010     2010  ...                                            
+10       2016     2016  ...                                            
+11       2014     2014  ...                                            
+12       2015     2015  ...                                            
+13       2016     2016  ...                                            
+14       2020     2020  ...                                            
+15       2012     2012  ...                                            
+16       2015     2015  ...                                            
+17       2018     2018  ...                                            
+18       2017     2017  ...                                            
+
+[19 rows x 34 columns]
+[2023-07-09T08:42:38.945+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=extract_data, execution_date=20230709T084235, start_date=20230709T084238, end_date=20230709T084238
+[2023-07-09T08:42:39.002+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-07-09T08:42:39.050+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check
